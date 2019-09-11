@@ -42,15 +42,57 @@
                             <input type="password" placeholder="aksara 6 hingga 8">
                             <br>
                             <button type="submit">Simpan</button>
-                            <input type="submit" value="Hantar"/>
-                            <input type="submit" value="Draf"/>
+                            <input type="submit" value="Hantar" />
+                            <input type="submit" value="Draf" />
                         </form>
                     </div>
                 </div>
 
             </div>
             <div class="col-6">
+                <!-- .card>(div.card-header{Bootsrtap Form})+(div.card-body) -->
+                <div class="card">
+                    <div class="card-header">Bootsrtap Form</div>
+                    <div class="card-body">
+                        <form action="">
 
+                            <!-- Input Nama Penuh -->
+                            <div class="form-group">
+                                <label for="">Nama Penuh</label>
+                                <input type="text" class="form-control">
+                            </div>
+
+                            <!-- Input Email -->
+                            <!-- .form-group>(label{Email Rasmi}+(input:email.form-control)) -->
+                            <div class="form-group">
+                                <label for="">Email Rasmi</label>
+                                <input type="email" class="form-control">
+                            </div>
+
+                            <!-- Input Password -->
+                            <!-- .form-group>(label{Kata Laluan}+(input:password.form-control)) -->
+                            <div class="form-group">
+                                <label for="">Kata Laluan</label>
+                                <input type="password" class="form-control">
+                            </div>
+
+                            <!-- Button Submit btn-success -->
+                            <!-- .form-group>button:submit.btn.btn-success{Hantar} -->
+                            <!-- .form-group>button:reset.btn.btn-dark{Reset} -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">Hantar</button>
+                                <button type="reset" class="btn btn-dark">Reset</button>
+                            </div>
+
+                            <!-- 
+                                .form-group>(button:submit.btn.btn-success{Hantar})
+                                    +(button:reset.btn.btn-dark{Reset}) 
+                            -->
+                        </form>
+                    </div>
+                </div>
+                <!-- JANGAN IKUT -->
+                <!-- .card>(div.card-header{Bootsrtap Form})+(div.card-body>form>(label*+input*2)) -->
             </div>
         </div>
     </div>
