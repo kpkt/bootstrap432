@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap first, then Bootstrap Grid, then Bootstrap Reboot -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <title>Bootstrap Starter template</title>
+
+</head>
+
+<body>
+
+    <!--EMMET: .container>.row>.col-12>form>.card>(div.card-header{Bootsrtap Form})+(div.card-body) -->
+    <div class="container">
+        <!--EMMET: .row>.col-12 -->
+        <div class="row">
+            <div class="col-12">
+                <!--EMMET: form>.card>(div.card-header{Bootsrtap Form})+(div.card-body) -->
+                <form>
+                    <div class="card">
+                        <div class="card-header">Bootsrtap Form Grid</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6" id="col-kiri">
+
+                                    <!-- .form-group>input:text.form-control -->
+                                    <div class="form-group">
+                                        <label for="">Nama Penuh</label>
+                                        <input type="text" class="form-control" placeholder="nama penuh">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Email Rasmi</label>
+                                        <input type="email" class="form-control" placeholder="Email Rasmi">
+                                        <small class="form-text text-info">Email rasmi KPKT cth :
+                                            zaki@kpkt.gov.my</small>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4" id="col-start">
+                                            <div class="form-group">
+                                                <label for="">No Phone</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-4" id="col-center">
+                                            <div class="form-group">
+                                                <label for="">No Tel</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-4" id="col-end">
+                                            <div class="form-group">
+                                                <label for="">No Fax</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6" id="col-kana">
+                                    <div class="form-group">
+                                        <label>Bahagian</label>
+                                        <!-- select.form-control>option[value="Bahagian $"]{Bahagian $}*5 -->
+                                        <label>Bahagian</label>
+                                        <select class="form-control">
+                                            <option>--Pilih Bahagian--</option>
+                                            <option value="Bahagian 1">Bahagian 1</option>
+                                            <option value="Bahagian 2">Bahagian 2</option>
+                                            <option value="Bahagian 3">Bahagian 3</option>
+                                            <option value="Bahagian 4">Bahagian 4</option>
+                                            <option value="Bahagian 5">Bahagian 5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- select.form-control>option[value="Unit $"]{Unit $}*5 -->
+                                        <label>Unit</label>
+                                        <select class="form-control">
+                                            <option>--Pilih Unit--</option>
+                                            <option value="Unit 1">Unit 1</option>
+                                            <option value="Unit 2">Unit 2</option>
+                                            <option value="Unit 3">Unit 3</option>
+                                            <option value="Unit 4">Unit 4</option>
+                                            <option value="Unit 5">Unit 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <!-- <button type="submit" class="btn btn-primary">Hantar</button>
+                            <button type="reset" class="btn btn-dark">Reset</button> -->
+
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <small>Segala maklumat diri dan perkara yang dikemukakan adalah benar dan ... Saya telah membaca dan setuju dengan Terma dan Syarat yang telah ditetapkan</small>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <button type="submit" class="btn btn-primary">Hantar</button>
+                                    <button type="reset" class="btn btn-dark">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

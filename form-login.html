@@ -12,46 +12,39 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 
     <title>Bootstrap Starter template</title>
-    <style>
-        body,
-        html {
-            height: 100%;
-        }
-    </style>
+   
 </head>
 
 <body>
   
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-2 mx-auto">
-               <!-- form>(.form-group>input.form-control)*2 -->
+    <div class="container" style="margin-top: 100px">
+        <div class="row">
+            <div class="col-4 offset-md-4">
+                    <div class="card">
+                            <div class="card-body">
+                                <!-- Login form Input Email; Input Password -->
+                                <form>
+                                    <h5 class="card-title">Login From</h5>
+                                    <!--EMMET: .form-group*2>input:text.form-control*2 -->
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control" placeholder="******">
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-block btn-sm">Login</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-link btn-block btn-sm">Daftar Akaun</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
             </div>
         </div>
     </div>
-    <!-- <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-6 mx-auto">
-                <div class="jumbotron">
-                    I'm vertically centered
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-6 mx-auto">
-                <div class="jumbotron text-center">
-                    <h1 class="display-4">Jumbotron</h1>
-                    <p class="lead">This is a simple centered hero unit.</p>
-                    <p class="lead">
-                        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div> -->
+   
 
 
     <!-- Optional JavaScript -->
