@@ -105,7 +105,7 @@
                                         ditetapkan</small>
                                 </div>
                                 <div class="flex-shrink-0">
-                                    <button type="submit" class="btn btn-primary" id="btnHantar"
+                                    <button type="button" class="btn btn-primary" id="btnHantar"
                                         disabled>Hantar</button>
                                     <button type="reset" class="btn btn-dark">Reset</button>
                                 </div>
@@ -166,14 +166,13 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" id="btnSetuju" disabled class="btn btn-success"
-                        data-dismiss="modal">Setuju</button>
-                    <button type="button" id="btnTakSetuju" class="btn btn-dark" data-dismiss="modal">Tak
-                        Setuju</button>
+                    <button type="button" id="btnSetuju" disabled class="btn btn-success">Setuju</button>
+                    <button type="button" id="btnTakSetuju" class="btn btn-dark">Tak Setuju</button>
                 </div>
             </div>
         </div>
     </div>
+   
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -181,6 +180,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+
             //apabila checkbox click
             //$('input[type="checkbox"]').on('click',function(){
             //$('.form-control').on('click',function(){
@@ -195,13 +195,25 @@
 
             });
 
-            //enable btnHantar bila modal mula hilang
-            $('#exampleModal').on('hide.bs.modal', function (e) {
-                //coding show loading
+            //bila btnSetuju klik
+            //Hide modal
+            //btnHantar akan enable
+            //value checkbox kembali uncheck
+            $('#btnSetuju').on('click', function (e) {
+                $('#checkboxSetuju').prop("checked", false);
+                $('#exampleModal').modal("hide");//modal hide event
+                $('#btnHantar').prop("disabled", false);
             });
 
-            $('#exampleModal').on('hidden.bs.modal', function (e) {
-                $('#btnHantar').prop("disabled", false);
+            //bila btnTakSetuju klik
+            //Hide modal
+            //btnHantar kekal disabled
+            //value checkbox kembali uncheck
+            $('#btnTakSetuju').on('click', function (e) {
+                $('#checkboxSetuju').prop("checked", false);
+                $('#exampleModal').modal("hide");//modal hide event
+
+                $('#btnHantar').prop("disabled", true);
             });
         });
     </script>
