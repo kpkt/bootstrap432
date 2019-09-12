@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap first, then Bootstrap Grid, then Bootstrap Reboot -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <title>Bootstrap Starter template</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+            Modal Form
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel"
+            aria-hidden="true" data-backdrop="static" data-keybord="false">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="formModalLabel">Modal Form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form1">
+
+                            <!-- Input Nama Penuh -->
+                            <div class="form-group">
+                                <label for="">Nama Penuh</label>
+                                <input type="text" minlength="5" maxlength="100"
+                                    onkeyup="this.value = this.value.replace(/[^A-Za-z@\\' ]/g, '');"
+                                    class="form-control" placeholder="Nama Penuh">
+                            </div>
+
+                            <!-- Input Email -->
+                            <!-- .form-group>(label{Email Rasmi}+(input:email.form-control)) -->
+                            <div class="form-group">
+                                <label for="">Email Rasmi</label>
+                                <input type="email" class="form-control" placeholder="Email Rasmi">
+                                <small class="form-text text-info">Email rasmi KPKT cth : zaki@kpkt.gov.my</small>
+                            </div>
+
+                            <!-- Input Password -->
+                            <!-- .form-group>(label{Kata Laluan}+(input:password.form-control)) -->
+                            <div class="form-group">
+                                <label for="">Kata Laluan</label>
+                                <input type="password" class="form-control" placeholder="*******">
+                                <small class="form-text text-info">Kata laluan mestilah sekurang-kurangnya lapan (8)
+                                    aksara dengan gabungan huruf, nombor dan simbol</small>
+                                <small class="form-text text-info">Contoh : P@55w0rd5@yA</small>
+                            </div>
+
+                            <!-- Button Submit btn-success -->
+                            <!-- .form-group>button:submit.btn.btn-success{Hantar} -->
+                            <!-- .form-group>button:reset.btn.btn-dark{Reset} -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success" data-dismiss="modal">Hantar</button>
+                                <button type="reset" class="btn btn-dark">Reset</button>
+                            </div>
+
+                            <!-- 
+                                .form-group>(button:submit.btn.btn-success{Hantar})
+                                    +(button:reset.btn.btn-dark{Reset}) 
+                            -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#formModal').on('hidden.bs.modal', function (e) {
+                // do something...
+                //clear all input
+                //Cara 1
+                $('input[type="text"], input[type="email"], input[type="password"]').val('');
+
+                //Cara 2 
+                $('input[type="text"]').val('');
+                $('input[type="email"]').val('');
+                $('input[type="password"]').val('');
+
+                //Cara3
+                $('form#form1 > input.form-control').val('');
+
+                //Cara ringkas
+                //Ibarat seperti klik button reset
+                $('form#form1')[0].reset();
+            });
+        });
+    </script>
+</body>
+
+</html>

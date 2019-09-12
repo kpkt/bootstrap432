@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap first, then Bootstrap Grid, then Bootstrap Reboot -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+
+    <title>Bootstrap Starter template</title>
+</head>
+
+<body>
+
+    <!--EMMET: .container>.row>.col-12>form>.card>(div.card-header{Bootsrtap Form})+(div.card-body) -->
+    <div class="container">
+        <!--EMMET: .row>.col-12 -->
+        <div class="row">
+            <div class="col-12">
+                <!--EMMET: form>.card>(div.card-header{Bootsrtap Form})+(div.card-body) -->
+                <form>
+                    <div class="card">
+                        <div class="card-header">Bootsrtap Form Grid</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-6" id="col-kiri">
+
+                                    <!-- .form-group>input:text.form-control -->
+                                    <div class="form-group">
+                                        <label for="">Nama Penuh</label>
+                                        <input type="text" class="form-control" placeholder="nama penuh">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="">Email Rasmi</label>
+                                        <input type="email" class="form-control" placeholder="Email Rasmi">
+                                        <small class="form-text text-info">Email rasmi KPKT cth :
+                                            zaki@kpkt.gov.my</small>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-4" id="col-start">
+                                            <div class="form-group">
+                                                <label for="">No Phone</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-4" id="col-center">
+                                            <div class="form-group">
+                                                <label for="">No Tel</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-4" id="col-end">
+                                            <div class="form-group">
+                                                <label for="">No Fax</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-6" id="col-kanan">
+                                    <div class="form-group">
+                                        <label>Bahagian</label>
+                                        <div class="input-group">
+                                            <select class="form-control" id="bahagianSelect">
+                                                <option>--Pilih Bahagian--</option>
+                                                <option value="Bahagian 1">Bahagian 1</option>
+                                                <option value="Bahagian 2">Bahagian 2</option>
+                                                <option value="Bahagian 3">Bahagian 3</option>
+                                                <option value="Bahagian 4">Bahagian 4</option>
+                                                <option value="Bahagian 5">Bahagian 5</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleFormModal" id="btnDaftar">&plus;</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- select.form-control>option[value="Unit $"]{Unit $}*5 -->
+                                        <label>Unit</label>
+                                        <select class="form-control">
+                                            <option>--Pilih Unit--</option>
+                                            <option value="Unit 1">Unit 1</option>
+                                            <option value="Unit 2">Unit 2</option>
+                                            <option value="Unit 3">Unit 3</option>
+                                            <option value="Unit 4">Unit 4</option>
+                                            <option value="Unit 5">Unit 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <!-- <button type="submit" class="btn btn-primary">Hantar</button>
+                            <button type="reset" class="btn btn-dark">Reset</button> -->
+
+                            <div class="d-flex">
+                                <div class="w-100">
+                                    <small>Segala maklumat diri dan perkara yang dikemukakan adalah benar dan ...
+                                        Saya telah membaca dan setuju dengan <a href="#" data-toggle="modal"
+                                            data-target="#exampleModal">Terma dan Syarat</a> yang telah
+                                        ditetapkan</small>
+                                </div>
+                                <div class="flex-shrink-0">
+                                    <button type="submit" class="btn btn-primary" id="btnHantar"
+                                        disabled>Hantar</button>
+                                    <button type="reset" class="btn btn-dark">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleFormModalLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleFormModalLabel">Modal Daftar Bahagian Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form2">
+                        <!-- .form-group>input:text.form-control -->
+                        <div class="form-group">
+                            <label for="">Nama Bahagian</label>
+                            <input id="inputBahagian" type="text" class="form-control" placeholder="Nama Bahagian">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="bhgBtnSave" data-dismiss="modal">Save
+                        changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal
+    data-backdrop="false" //disable;screen putih
+    data-backdrop="static" //disable;screen gray
+    -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Terma dan Syarat</h5>
+                </div>
+                <div class="modal-body">
+                    <h6>Terma</h6>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <h6>Syarat</h6>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                        type
+                        and scrambled it to make a type specimen book. It has survived not only five centuries, but also
+                        the
+                        leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
+                        1960s
+                        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                        desktop
+                        publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                    <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                        <input type="checkbox" class="custom-control-input" id="checkboxSetuju">
+                        <label class="custom-control-label" for="checkboxSetuju">Ya, saya setuju dengan terma dan syarat
+                            tersebut</label>
+                    </div>
+                </div>
+
+
+                <div class="modal-footer">
+                    <button type="button" id="btnSetuju" disabled class="btn btn-success"
+                        data-dismiss="modal">Setuju</button>
+                    <button type="button" id="btnTakSetuju" class="btn btn-dark" data-dismiss="modal">Tak
+                        Setuju</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#exampleModal').on('shown.bs.modal', function (e) {
+                //apabila checkbox click
+                //$('input[type="checkbox"]').on('click',function(){
+                //$('.form-control').on('click',function(){
+                $('#checkboxSetuju').on('click', function () {
+                    //Utk pastikan button check berfungsi
+                    //apabila di klik
+                    //alert(this.checked);
+
+                    //Checked == true, disabled = false
+                    //Checked == false, disabled = true
+                    $('#btnSetuju').prop("disabled", !this.checked);
+
+                });
+            });
+
+            //enable btnHantar bila modal mula hilang
+            $('#exampleModal').on('hide.bs.modal', function (e) {
+                //coding show loading
+            });
+
+            $('#exampleModal').on('hidden.bs.modal', function (e) {
+                $('#btnHantar').prop("disabled", false);
+            });
+
+            $('#exampleFormModal').on('shown.bs.modal', function (e) {
+                $('#bhgBtnSave').on('click', function (e) {
+                    var val = $('#inputBahagian').val();
+                    if (val == '') {
+                        alert("Sila isi maklumat Bahagian");
+                    }
+                    $('#bahagianSelect').append($('<option>', { value: val, text: val }));
+                });
+            });
+
+
+
+
+        });
+    </script>
+</body>
+
+</html>
