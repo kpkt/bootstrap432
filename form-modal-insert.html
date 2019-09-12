@@ -208,36 +208,47 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.slim.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#exampleModal').on('shown.bs.modal', function (e) {
-                //apabila checkbox click
-                //$('input[type="checkbox"]').on('click',function(){
-                //$('.form-control').on('click',function(){
-                $('#checkboxSetuju').on('click', function () {
-                    //Utk pastikan button check berfungsi
-                    //apabila di klik
-                    //alert(this.checked);
 
-                    //Checked == true, disabled = false
-                    //Checked == false, disabled = true
-                    $('#btnSetuju').prop("disabled", !this.checked);
+            //apabila checkbox click
+            //$('input[type="checkbox"]').on('click',function(){
+            //$('.form-control').on('click',function(){
+            $('#checkboxSetuju').on('click', function () {
+                //Utk pastikan button check berfungsi
+                //apabila di klik
+                //alert(this.checked);
 
-                });
+                //Checked == true, disabled = false
+                //Checked == false, disabled = true
+                $('#btnSetuju').prop("disabled", !this.checked);
+
             });
 
-            //enable btnHantar bila modal mula hilang
-            $('#exampleModal').on('hide.bs.modal', function (e) {
-                //coding show loading
-            });
-
-            $('#exampleModal').on('hidden.bs.modal', function (e) {
+            //bila btnSetuju klik
+            //Hide modal
+            //btnHantar akan enable
+            //value checkbox kembali uncheck
+            $('#btnSetuju').on('click', function (e) {
+                $('#checkboxSetuju').prop("checked", false);
+                $('#exampleModal').modal("hide");//modal hide event
                 $('#btnHantar').prop("disabled", false);
+            });
+
+            //bila btnTakSetuju klik
+            //Hide modal
+            //btnHantar kekal disabled
+            //value checkbox kembali uncheck
+            $('#btnTakSetuju').on('click', function (e) {
+                $('#checkboxSetuju').prop("checked", false);
+                $('#exampleModal').modal("hide");//modal hide event
+
+                $('#btnHantar').prop("disabled", true);
             });
 
             $('#exampleFormModal').on('shown.bs.modal', function (e) {
@@ -248,7 +259,11 @@
                     }
                     $('#bahagianSelect').append($('<option>', { value: val, text: val }));
                 });
+                //Cara ringkas
+                //Ibarat seperti klik button reset
+                $('form#form2')[0].reset();
             });
+           
 
 
 

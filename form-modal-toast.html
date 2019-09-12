@@ -10,11 +10,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-
-    
 
     <title>Bootstrap Starter template</title>
 </head>
@@ -29,7 +24,7 @@
                 <!--EMMET: form>.card>(div.card-header{Bootsrtap Form})+(div.card-body) -->
                 <form>
                     <div class="card">
-                        <div class="card-header"><i class="fab fa-bootstrap"></i> Bootsrtap Form Grid</div>
+                        <div class="card-header">Bootsrtap Form Grid</div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-6" id="col-kiri">
@@ -69,19 +64,23 @@
                                     </div>
 
                                 </div>
-                                <div class="col-6" id="col-kana">
+                                <div class="col-6" id="col-kanan">
                                     <div class="form-group">
                                         <label>Bahagian</label>
-                                        <!-- select.form-control>option[value="Bahagian $"]{Bahagian $}*5 -->
-                                        <label>Bahagian</label>
-                                        <select class="form-control">
-                                            <option>--Pilih Bahagian--</option>
-                                            <option value="Bahagian 1">Bahagian 1</option>
-                                            <option value="Bahagian 2">Bahagian 2</option>
-                                            <option value="Bahagian 3">Bahagian 3</option>
-                                            <option value="Bahagian 4">Bahagian 4</option>
-                                            <option value="Bahagian 5">Bahagian 5</option>
-                                        </select>
+                                        <div class="input-group">
+                                            <select class="form-control" id="bahagianSelect">
+                                                <option>--Pilih Bahagian--</option>
+                                                <option value="Bahagian 1">Bahagian 1</option>
+                                                <option value="Bahagian 2">Bahagian 2</option>
+                                                <option value="Bahagian 3">Bahagian 3</option>
+                                                <option value="Bahagian 4">Bahagian 4</option>
+                                                <option value="Bahagian 5">Bahagian 5</option>
+                                            </select>
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleFormModal" id="btnDaftar">&plus;</button>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <!-- select.form-control>option[value="Unit $"]{Unit $}*5 -->
@@ -105,19 +104,49 @@
                             <div class="d-flex">
                                 <div class="w-100">
                                     <small>Segala maklumat diri dan perkara yang dikemukakan adalah benar dan ...
-                                        Saya telah membaca dan setuju dengan 
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal" data-tooltip="tooltip" data-placement="top" title="Klik disini untuk papar terma dan syarat">Terma dan Syarat</a> yang telah
+                                        Saya telah membaca dan setuju dengan <a href="#" data-toggle="modal"
+                                            data-target="#exampleModal">Terma dan Syarat</a> yang telah
                                         ditetapkan</small>
                                 </div>
                                 <div class="flex-shrink-0">
-                                    <button type="button" class="btn btn-success align-middle" id="btnHantar"
-                                        disabled data-tooltip="tooltip" data-placement="top" title="Pastikan anda telah baca dan setuju terma dan syarat"><i class="far fa-save fa-2x"></i> Hantar </button>
+                                    <button type="submit" class="btn btn-primary" id="btnHantar"
+                                        disabled>Hantar</button>
                                     <button type="reset" class="btn btn-dark">Reset</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleFormModal" tabindex="-1" role="dialog" aria-labelledby="exampleFormModalLabel"
+        aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleFormModalLabel">Modal Daftar Bahagian Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form2">
+                        <!-- .form-group>input:text.form-control -->
+                        <div class="form-group">
+                            <label for="">Nama Bahagian</label>
+                            <input id="inputBahagian" type="text" class="form-control" placeholder="Nama Bahagian">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" id="bhgBtnSave" data-dismiss="modal">Save
+                        changes</button>
+                </div>
             </div>
         </div>
     </div>
@@ -171,24 +200,44 @@
 
 
                 <div class="modal-footer">
-                    <button type="button" id="btnSetuju" disabled class="btn btn-success">Setuju</button>
-                    <button type="button" id="btnTakSetuju" class="btn btn-dark" data-tooltip="tooltip" data-placement="top" data-html="true" title="Tindakan ini tidak membenarkan anda untuk <strong>HANTAR</strong> permohonan">Tak Setuju</button>
+                    <button type="button" id="btnSetuju" disabled class="btn btn-success"
+                        data-dismiss="modal">Setuju</button>
+                    <button type="button" id="btnTakSetuju" class="btn btn-dark" data-dismiss="modal">Tak
+                        Setuju</button>
                 </div>
             </div>
         </div>
     </div>
-   
+    <div class="fixed-top">
+        <div class="m-5 d-flex justify-content-center">
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center"
+                style="min-height: 200px;">
 
+                <!-- Then put toasts within -->
+                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" class="toast"
+                    data-autohide="false">
+                    <div class="toast-header">
+                        <strong class="mr-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
-            //wajib define utk guna tooltip
-            $('[data-tooltip="tooltip"]').tooltip();
 
             //apabila checkbox click
             //$('input[type="checkbox"]').on('click',function(){
@@ -224,6 +273,27 @@
 
                 $('#btnHantar').prop("disabled", true);
             });
+
+            $('#exampleFormModal').on('shown.bs.modal', function (e) {
+                $('#bhgBtnSave').on('click', function (e) {
+                    var val = $('#inputBahagian').val();
+                    if (val == '') {
+                        alert("Sila isi maklumat Bahagian");
+                    }
+                    $('#bahagianSelect').append($('<option>', { value: val, text: val }));
+                });
+                //Cara ringkas
+                //Ibarat seperti klik button reset
+                $('form#form2')[0].reset();
+            });
+
+            // $('.toast').toast('show');
+
+            // setTimeout(() => {
+            //     $('.toast').toast('hide');
+            // }, 3000)
+
+
         });
     </script>
 </body>
